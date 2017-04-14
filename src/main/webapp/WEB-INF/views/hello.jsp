@@ -8,8 +8,7 @@
 <script src="resources/js/login.js"></script>
 <title>Insert title here</title>
 </head>
-<body ng-controller="loginController as loginCtrl">
-	<h3>{{loginCtrl.message}}</h3>
-	<a href="/Management/logout">Click Here to Logout</a>
+<body>
+	<h3>Welcome</h3>
 </body>
 </html>
