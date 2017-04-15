@@ -12,14 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 	
-	@RequestMapping(value="/welcome", method=RequestMethod.GET)
-	public String printWelcome(ModelMap model, Principal principal) {
+	@RequestMapping(value={"/", "/home"}, method=RequestMethod.GET)
+	public String printWelcome(ModelMap model) {
 		System.out.println("LoginController Called");
 		
-		String name = principal.getName();
-		model.addAttribute("username", name);
-		model.addAttribute("message", "Spring security Custom Form Example");
-		return "hello";
+		return "home";
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
