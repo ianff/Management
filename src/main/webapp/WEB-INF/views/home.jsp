@@ -5,10 +5,11 @@
 <html ng-app="home">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="resources/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="resources/js/home.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 <title>Home Page</title>
 </head>
 <body ng-controller="homeController as homeCtrl">
@@ -19,7 +20,9 @@
 		</div>
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#/">Home</a></li>
-			<li><a href="" ng-click="homeCtrl.logout()">Logout</li>
+			<li><a href="/publisher">Publisher</a></li>
+			<li><a href="/page2">Page2</a></li>
+			<li><a href="<c:url value="j_spring_security_logout" />" ng-click="homeCtrl.logout()">Logout</a></li>
 		</ul>
 	</div>
 	</nav>
